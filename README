@@ -1,0 +1,44 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=826
+
+This is identation file for MetaPost language. I'm not write same file for MetaFont only because I not use this powerfull program, but it is very similar to MetaPost language and if somebody ask me to write it I may be do this.
+
+So this is citation from mp.vim where I wrote about indent in MetaPost
+
+" Identation Rules: {{{1 
+" First of all, MetaPost language don't expect any identation rules.
+" This screept need for you only if you (not MetaPost) need to do
+" exactly code. If you don't need to use indentation, see
+" :help filetype-indent-off
+"
+" Note: Every rules of identation in MetaPost or TeX languages (and in some
+" other of course) is very subjective. I can release only my vision of this
+" promlem.
+"
+" ..........................................................................
+" Example of correct (by me) identation {{{2
+" shiftwidth=4
+" ==========================================================================
+" for i=0 upto 99:
+"     z[i] = (0,1u) rotated (i*360/100);
+" endfor
+" draw z0 -- z10 -- z20
+"         withpen ...     % <- 2sw because breaked line
+"         withcolor ...;  % <- same as previous
+" draw z0 for i=1 upto 99:
+"             -- z[i]             % <- 1sw from left end of 'for' satement
+"         endfor withpen ...      % <- 0sw from left end of 'for' satement
+"                 withcolor ...;  % <- 2sw because breaked line
+" draw if One:     % <- This is internal if (like 'for' above)
+"          one
+"      elsif Other:
+"          other
+"      fi withpen ...;
+" if one:          % <- This is external if
+"     draw one;
+" elseif other:
+"     draw other;
+" fi
+" draw z0; draw z1;
+" }}}
+" }}}
+
